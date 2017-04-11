@@ -23,7 +23,7 @@ def write(records, count):
 
 def time_diff(start_time):
     current_time = datetime.datetime.now()
-    diff = current_time - start_time
+    diff = (current_time - start_time).total_seconds()
     return str(diff)
 
 def main():
