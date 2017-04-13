@@ -3,5 +3,5 @@
 
 cd /
 cd home/pi/bt_rssi
-sudo python main.py
+sudo python run.py
 cd /
