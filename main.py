@@ -15,7 +15,7 @@ BT_ADDR = 'C8:A8:23:EE:14:61'#/// Enter your bluetooth address here!
 
 
 def write(records, count):
-    f = open("records2.txt", "a+") #open records for append. If not present create
+    f = open("records.txt", "a+") #open records for append. If not present create
     for i in range(count): #write out each record
         f.write(str(records[i][0]) + "," + str(records[i][1]) + '\n')
     f.close()
