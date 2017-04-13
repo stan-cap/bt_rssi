@@ -1,5 +1,8 @@
 import main
 import datetime
+import time
+
+time.sleep(10)
 
 start_time = datetime.datetime.now()
 exec_count = 0
