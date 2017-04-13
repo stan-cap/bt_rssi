@@ -11,13 +11,12 @@ BT_ADDR = 'C8:A8:23:EE:14:61'#/// Enter your bluetooth address here!
 
 # ----------------------- DO NOT EDIT ANYTHING BELOW THIS LINE --------------------------- #
 
-NUM_LOOP = 50
-records = []
 
 
-def write(records, count, mod_count):
-    f = open("records.txt", "a+") #open records for append. If not present create
-    for i in range(mod_count, count): #write out each record
+
+def write(records, count):
+    f = open("records2.txt", "a+") #open records for append. If not present create
+    for i in range(count): #write out each record
         f.write(str(records[i][0]) + "," + str(records[i][1]) + '\n')
     f.close()
 
@@ -26,14 +25,13 @@ def time_diff(start_time):
     diff = (current_time - start_time).total_seconds()
     return str(diff)
 
-def main():
+def main(start_time):
 
-    time.sleep(10)
-    start_time = datetime.datetime.now()
-    addr = BT_ADDR
-    num = NUM_LOOP
+    records = []
     count = 0
-    mod_count = 0
+    time.sleep(10)
+    addr = BT_ADDR
+    num = 10
 
     while(count < num):      
         btrssi = BluetoothRSSI(addr=addr)
@@ -42,10 +40,7 @@ def main():
         records.append(record)
         count += 1
         time.sleep(.5)
-        if(count % 5 == 0):
-            write(records, count, mod_count)
-            mod_count += 5
-
+    write(records, count)
 
 if __name__ == '__main__':
     main()
