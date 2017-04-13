@@ -20,8 +20,8 @@ BT_ADDR2 = '00:CD:FE:9C:77:FD'#/// Enter your bluetooth address for dev 2 here!
 def write(records1, records2, count):
     f = open("records.txt", "a+")                       # open records for append. If not present create
     for i in range(count):                              # write out each record
-        f.write(str(records1[i][0]) + "," + str(records1[i][1]) + '\n')
-        f.write(str(records2[i][0]) + "," + str(records2[i][1]) + '\n')
+        f.write(str(records1[i][0]) + "," + str(records1[i][1]) + 1 + '\n')
+        f.write(str(records2[i][0]) + "," + str(records2[i][1]) + 2 + '\n')
     f.close()
 
 def time_diff(start_time):
