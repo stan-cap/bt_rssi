@@ -29,7 +29,6 @@ def main(start_time):
 
     records = []
     count = 0
-    time.sleep(10)
     addr = BT_ADDR
     num = 10
 
