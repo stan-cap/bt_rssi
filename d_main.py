@@ -31,24 +31,24 @@ def time_diff(start_time):
 
 def main(start_time):
 
-    records1 = []                                       # initialize array of records
-    records2 = []
-    count = 0                                          # initialize count
-    addr1 = BT_ADDR1                                     # assign BT_ADDR
-    addr2 = BT_ADDR2
-    num = 10                                           # amount of records to be recorded
+    records1 = []                                       # initialize array of records for dev 1
+    records2 = []                                       # initialize array of records for dev 2
+    count = 0                                           # initialize count
+    addr1 = BT_ADDR1                                    # assign BT_ADDR for dev 1
+    addr2 = BT_ADDR2                                    # assign BT_ADDR for dev 2
+    num = 10                                            # amount of records to be recorded from each device
 
     while(count < num):      
         btrssi1 = BluetoothRSSI(addr=addr1)
         btrssi2 = BluetoothRSSI(addr=addr2)
-        time_e = time_diff(start_time)                 # get seconds elapsed
-        record1 = (btrssi1.get_rssi(), time_e)           # create record
-        record2 = (btrssi2.get_rssi(), time_e)
-        records1.append(record1)                         # add record to records array
+        time_e = time_diff(start_time)                   # get seconds elapsed
+        record1 = (btrssi1.get_rssi(), time_e)           # create record for first Bluetooth device
+        record2 = (btrssi2.get_rssi(), time_e)           # create record for second Bluetooth device
+        records1.append(record1)                         # add dev 1 record to dev 1 records array
         records2.append(record2)
         count += 1
-        time.sleep(.5)                                 # wait time to get next record
-    write(records1, records2, count)                              # write out records
+        time.sleep(.5)                                   # wait time to get next record
+    write(records1, records2, count)                     # write out records
 
 if __name__ == '__main__':
     main()
