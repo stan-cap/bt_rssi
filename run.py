@@ -10,7 +10,7 @@ time.sleep(10)                       # sleep for 10 seconds to allow Bluetooth S
 
 start_time = datetime.datetime.now() # get relative start time
 exec_count = 0                       # initialize counter
-exec_amt = 12000                     # amount of times to execute main which records 10 records
+exec_amt = 12000                     # amount of times to execute main.py which records 10 records
 
 while (exec_count < exec_amt):       # execute main.py while count is less than amount
     main.main(start_time)
