@@ -2,6 +2,10 @@ import main
 import datetime
 import time
 
+f = open("records.txt", "a+")
+f.write("RSSI, sec_elapsed" + '\n')
+f.close()
+
 time.sleep(10)
 
 start_time = datetime.datetime.now()
