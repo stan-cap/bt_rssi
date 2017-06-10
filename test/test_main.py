@@ -5,7 +5,7 @@ import datetime
 
 
 #////////////////////////////////
-BT_ADDR = 'C8:A8:23:EE:14:61'#/// Enter your bluetooth address here!
+BT_ADDR = 'xx:xx:xx:xx:xx:xx'#/// Enter your bluetooth address here!
 #////////////////////////////////
 
 
