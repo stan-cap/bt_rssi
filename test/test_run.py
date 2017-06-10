@@ -2,7 +2,7 @@ import test_main
 import datetime
 import time
 
-f = open("test_records.txt", "w")            # open text file for editting
+f = open("test_records.txt", "w")    # open text file for editting
 f.write("RSSI, sec_elapsed" + '\n')  # add headers to text file
 f.close()
 
