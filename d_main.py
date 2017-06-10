@@ -5,11 +5,11 @@ import datetime
 
 
 #////////////////////////////////
-BT_ADDR1 = 'C8:A8:23:EE:14:61'#/// Enter your bluetooth address for dev 1 here!
+BT_ADDR1 = 'xx:xx:xx:xx:xx:xx'#/// Enter your bluetooth address for dev 1 here!
 #////////////////////////////////
 
 #////////////////////////////////
-BT_ADDR2 = '00:CD:FE:9C:77:FD'#/// Enter your bluetooth address for dev 2 here!
+BT_ADDR2 = 'xx:xx:xx:xx:xx:xx'#/// Enter your bluetooth address for dev 2 here!
 #////////////////////////////////
 
 # ----------------------- DO NOT EDIT ANYTHING BELOW THIS LINE --------------------------- #
